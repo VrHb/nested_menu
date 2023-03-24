@@ -3,9 +3,12 @@
   {% with items=menu.items.all %}
     {% for item in items %}
       {% if item.items.all %}
-      <ul>
         <li><a href="{{ item.get_url }}">{{ item.title }}</a></li>
-      </ul>
+        <ul>
+          {% for nested_item in item.items.all %}
+          <li><a href="{{ nested_item.get_url }}">{{ nested_item.title }}</a></li>
+          {% endfor %}
+        </ul>
       {% else %}
         <li><a href="{{ item.get_url }}">{{ item.title }}</a></li>
       {% endif %}

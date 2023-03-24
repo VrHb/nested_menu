@@ -8,8 +8,8 @@ from .views import HomeView, ItemsView, OrdersView
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
-    path('orders', OrdersView.as_view(), name='orders'),
-    path('items', ItemsView.as_view(), name='items'),
+    path('orders/', OrdersView.as_view(), name='orders'),
+    path('items/', ItemsView.as_view(), name='items'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
