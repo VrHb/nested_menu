@@ -28,6 +28,7 @@ class MenuItem(models.Model):
     menu = models.ForeignKey(
         Menu,
         related_name='items',
+        verbose_name='Меню',
         blank=True,
         null=True,
         on_delete=models.CASCADE
@@ -35,6 +36,7 @@ class MenuItem(models.Model):
     parent = models.ForeignKey(
         'self',
         related_name='items',
+        verbose_name='Родительский элемент',
         on_delete=models.CASCADE
     )
     title = models.CharField(

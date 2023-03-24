@@ -1,9 +1,8 @@
-from django.shortcuts import render
-
-from .models import Menu
+from django.views.generic import TemplateView
 
 
-def show_menu(request):
-    menus = {'menus': Menu.objects.all()}
-    return render(request, template_name='menu.html', context=menus)
+class HomeView(TemplateView):
+    template_name = 'home.html'
+
+
 
