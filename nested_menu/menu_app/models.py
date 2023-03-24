@@ -48,7 +48,7 @@ class MenuItem(models.Model):
     parent = models.ForeignKey(
         'self',
         related_name='items',
-        verbose_name='Дочерний элемент',
+        verbose_name='Родительский элемент',
         blank=True,
         null=True,
         on_delete=models.CASCADE
