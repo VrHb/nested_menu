@@ -1,0 +1,10 @@
+<ul>
+  {% for menu in menus %}
+    <li>{{ menu.name }}</li>
+    {% if menu.childred.exists %}
+      {% with menu.cahildren.all as menus %}
+        {% include "templates/menu.html" %}
+      {% endwith %}
+    {% endif %}
+  {% endfor %}
+</ul>
