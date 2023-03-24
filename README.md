@@ -20,7 +20,6 @@ pip install -r requirements.txt
 - Создать базу данных:
 
 ```shell
-python manage.py makemigrations menu_app;
 python manage.py migrate
 ```
 
