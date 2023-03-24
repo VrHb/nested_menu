@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load draw_menu %}
 
 {% block title %}
   <title>Main page - </title>
@@ -6,4 +7,5 @@
 
 {% block content %}
   <h1>Главная страница</h1>
+  {% draw_menu 'main' %}
 {% endblock %}
