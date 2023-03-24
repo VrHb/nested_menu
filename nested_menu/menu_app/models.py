@@ -37,6 +37,8 @@ class MenuItem(models.Model):
         'self',
         related_name='items',
         verbose_name='Родительский элемент',
+        blank=True,
+        null=True,
         on_delete=models.CASCADE
     )
     title = models.CharField(
